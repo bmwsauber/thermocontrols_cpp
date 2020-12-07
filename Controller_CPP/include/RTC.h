@@ -10,7 +10,7 @@ class RTC : public Task
 
 private:
     WiFiUDP ntpUDP;
-    NTPClient timeClient;
+    NTPClient timeClient = NTPClient(this->ntpUDP);
 
 public:
     uint8_t hours;

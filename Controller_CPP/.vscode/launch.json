@@ -12,8 +12,9 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug",
-            "executable": "d:/Ellectonics/ESP/Thermocontrol/.pio/build/nodemcuv2/firmware.elf",
-            "toolchainBinDir": "C:/Users/Zzz/.platformio/packages/toolchain-xtensa/bin",
+            "executable": "d:/Electro/MK/TermocontrolNodeMcu/Controller_CPP/.pio/build/nodemcuv2/firmware.elf",
+            "projectEnvName": "nodemcuv2",
+            "toolchainBinDir": "C:/Users/alexa/.platformio/packages/toolchain-xtensa/bin",
             "preLaunchTask": {
                 "type": "PlatformIO",
                 "task": "Pre-Debug"
@@ -24,8 +25,9 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (skip Pre-Debug)",
-            "executable": "d:/Ellectonics/ESP/Thermocontrol/.pio/build/nodemcuv2/firmware.elf",
-            "toolchainBinDir": "C:/Users/Zzz/.platformio/packages/toolchain-xtensa/bin",
+            "executable": "d:/Electro/MK/TermocontrolNodeMcu/Controller_CPP/.pio/build/nodemcuv2/firmware.elf",
+            "projectEnvName": "nodemcuv2",
+            "toolchainBinDir": "C:/Users/alexa/.platformio/packages/toolchain-xtensa/bin",
             "internalConsoleOptions": "openOnSessionStart"
         }
     ]

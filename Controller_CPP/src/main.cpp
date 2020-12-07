@@ -16,7 +16,7 @@ void setup()
     while (!Serial) {}
     
     //Disable builtin AP
-    //WiFi.mode(WIFI_STA);
+    WiFi.mode(WIFI_STA);
 
     realTimeClock.setRTCUpd((1000 * 60 * 10), 1000, "europe.pool.ntp.org", 7200);
 
