@@ -15,7 +15,7 @@ private:
 public:
     uint8_t hours;
     uint8_t mins;
-    
+
     static RTC &getInstance()
     {
         static RTC instance;
@@ -24,10 +24,16 @@ public:
 
     void setRTCUpd(uint32_t updateInterval, uint16_t runInterval, const char *poolServerName, uint16_t timeZoneOffset)
     {
-        this->timeClient = NTPClient(this->ntpUDP, poolServerName, timeZoneOffset, updateInterval);
-        this->timeClient.begin();
-        this->timeClient.update();
-        
+        uint8_t tryes = 0;
+        do
+        {
+            delay(1000);
+            tryes++;
+            this->timeClient = NTPClient(this->ntpUDP, poolServerName, timeZoneOffset, updateInterval);
+            this->timeClient.begin();
+            this->timeClient.update();
+        } while (this->timeClient.getEpochTime() > 10000 || tryes > 60);
+
         this->setInterval(runInterval);
     }
 
